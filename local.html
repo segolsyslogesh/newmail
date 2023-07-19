@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const submit = ()=>{const data = document.getElementById('firstName').value; localStorage.setItem("name",data);}
+        // const submit = ()=> { localStorage.name = "hello"}
+        const retrive = ()=>{ let x = localStorage.getItem('name'); document.getElementById('show').innerHTML = x; console.log(x)}
+    </script>
+</head>
+<body>
+    <!-- <form action=""> -->
+        <input type="text" name="" id="firstName">
+        <button type="button" onclick="submit()">submit</button>
+        <button onclick="retrive()">get</button>
+        <p id="show"></p>
+    </form>
+</body>
+</html>
